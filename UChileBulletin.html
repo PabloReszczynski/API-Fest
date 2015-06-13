@@ -6,9 +6,22 @@
   <h1>Welcome to Meteor!</h1>
 
   {{> loginButtons}}
+
+  <table>
+  	<td>
+  		<!-- News Feed -->
+  		<ul>
+  			{{#each tasks}}
+  				{{> task}}
+  			{{/each}}
+  		</ul>
+  	</td>
+  </table>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="task">
+<li><table>
+	<td><span class="text">{{text}}</span></td>
+	<td>{{createAt}}</td>
+</table></li>
 </template>
