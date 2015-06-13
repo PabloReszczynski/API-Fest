@@ -1,6 +1,10 @@
 Tasks = new Mongo.Collection("tasks");
 
 if (Meteor.isClient){
+  Meteor.subscribe('calendar', function(){
+    Session.set('superCalendarReady', true);
+  });
+
   Template.body.helpers({
     tasks: function(){
       //show newest task first
@@ -34,5 +38,11 @@ if (Meteor.isClient){
     "click .delete": function(){
       Tasks.remove(this._id);
     }
+  });
+}
+
+if (Meteor.isServer){
+  Meteor.publish('calendar', function(){
+    return Calendar.find();
   });
 }
