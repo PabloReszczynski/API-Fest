@@ -1,1 +1,65 @@
-/* CSS declarations go here */
+body{
+  font-family: sans-serif;
+  background-image: url("http://www.psdgraphics.com/file/colorful-triangles-background.jpg");
+  background-size: 100%;
+  background-color: #cccccc;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  background: #445673;
+}
+
+
+h1{
+  text-align: center;
+  color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; 
+}
+
+h2 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 30px; font-weight: 800; line-height: 36px; margin: 20px 0 24px; }
+
+#logo{
+  width: 46px;
+  height: 44px;
+  background: url("https://github.com/mmattamala/LogosFCFM/blob/master/Universidad%20de%20Chile/logo_escudo_png.png?raw=true") 0 0;
+}
+
+.mainTable{
+  padding: 10px 10px 10px 10px;
+}
+
+.scroll{
+  padding-right: 50px;
+}
+.table1 {
+  border: 1px solid #CCFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  width:300px;
+  background:#CCFFFF;
+}
+#text1{
+  font-size:20px;
+  text-align:left;
+}
+#text2{
+  font-size:15px;
+}
+.table2{
+  border: 1px solid black;
+  padding:5px 15px 5px 15px;
+  background: #009999;
+  color: white;
+  line-height: 150%;
+  height:50px;
+  width:80px;
+  font-weight: normal;
+}
+.table3{
+    width:180px;
+}
+.container{
+   width: 320px;
+   height: 350px;
+   overflow:scroll;
+}

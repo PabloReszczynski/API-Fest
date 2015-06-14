@@ -3,12 +3,98 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <table class="mainTable">
+  <tr>
+  	<td><img src="http://omics-solutions.cl/wp-content/uploads/2013/06/logo-u-de-chile.gif" 
+  				style="width:150px;height:130px;"><br></td>
+  	<td><h1>Eventos UChile</h1></td>
+  </tr>
+  <tr>
+  	<td class="scroll">
+  		<!-- News Feed -->
+  		<div class="container">
+  			{{#each tasks}}
+  				{{> task}}
+  			{{/each}}
+  		</div>
+  	</td>
 
-  {{> hello}}
+  	<td>
+  		<!-- Calendar -->
+  		{{> calendar}}
+  	</td>
+	
+	<td>
+  		<!-- Checkbox -->
+  		{{> check}}
+  	</td>
+	
+	<td>
+		<form class="news">
+  		<label for="Eventos"></label>
+		</form>
+  	</td>
+   </tr>
+  </table>
+ 
+
+  <h2>Agrega un Evento</h2>
+  <form class="new-task">
+	<input type="text" name="title" placeholder="Título"/>
+    <input type="text" name="desc" placeholder="Descripción"/>
+	<input type="date" name="date"/>
+	<input type="time" name="time"/>
+	<input type="submit" value="Agregar"/>
+  </form>
+
+  
 </body>
+<!-- Template to see the events in the scroll -->
+<template name="task">
+	<table class="table1">
+    <tr>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+      <td>
+        <table class="table3">
+        <th id="text1">{{title}}</th>
+          <tr><td id="text2">
+            {{descripcion}}
+          </td></tr>
+        </table>
+      </td>
+
+      <td>
+        <table class="table2">
+          <th id="text3">{{date}}</th>
+        </table>
+      </td>
+
+    </tr>
+  </table>
+  <br>
 </template>
+
+
+
+<template name="check">
+	<td>
+		<form>
+		<input type="checkbox" name="Departamento" value="DCC">DCC
+		<br>
+		<input type="checkbox" name="Departamento" value="DIM">DIM
+		<br>
+		<input type="checkbox" name="Departamento" value="DIE">DIE
+		<br>
+		<input type="checkbox" name="Departamento" value="DII">DII
+		<br>
+		<input type="checkbox" name="Departamento" value="DFI">DFI
+		<br>
+		<input type="checkbox" name="Departamento" value="IQBT">IQBT
+		<br>
+		<input type="checkbox" name="Departamento" value="CEPC">CEPC
+		<br>
+		<input type="checkbox" name="Facultad" value="CEI">CEI
+		</form>
+	</td>
+</template>
+

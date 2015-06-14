@@ -1,23 +1,70 @@
-if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
+Tasks = new Mongo.Collection("tasks"); 
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
-    }
+if (Meteor.isClient){
+  Meteor.subscribe('calendar', function(){
+    Session.set('superCalendarReady', true);
   });
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
+  Template.body.helpers({
+    tasks: function(){
+      //show newest task first
+      return Tasks.find({}, {sort: {date: 1}});
+    }
+  });
+  
+    SuperCalendar.events.onDayClick = function (event, template, data) {
+    //pasa. Ya no pueden editar con click en el dia.
+    };
+        
+  Template.body.events({
+    "submit .new-task": function(event){
+      //this function is called when the new task form is submitted
+
+      var title = event.target.title.value;
+      var desc = event.target.desc.value;
+      var date = event.target.date.value;
+      var time = event.target.time.value;
+  
+      Tasks.insert({
+        title: title,
+        descripcion: desc,
+        date: date,
+        time: time,
+        createAt: new Date() //current time
+      });
+      
+      //Clear form
+      event.target.title.value = "";
+      event.target.desc.value = "";
+      event.target.date.value = "";
+      event.target.time.value = "";
+
+      //prevent default form submit
+      return false;
+    },
+        
+      "click .news": function(){
+          Eventos.value="BLAh";
+      },
+
+    "click .toggle-checked": function(){
+      //Set the checked property to the opposite of its current value
+      Tasks.update(this._id, {$set: {checked: ! this.checked}});
+    },
+
+    "click .delete": function(){
+      Tasks.remove(this._id);
     }
   });
 }
 
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
+if (Meteor.isServer){
+  Meteor.publish('calendar', function(){
+    return Calendar.find();
   });
+  Tasks.allow({
+    'insert':function(userId,doc){
+        return true;
+    }
+  })
 }
