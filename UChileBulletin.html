@@ -6,9 +6,9 @@
   <table class="mainTable">
   <tr>
   	<td><img src="http://omics-solutions.cl/wp-content/uploads/2013/06/logo-u-de-chile.gif" 
-  				style="width:150px;height:130px;"><br></td>
+  				style="width:150px;height:130px;"></td>
   	<td><h1>Eventos UChile</h1></td>
-    {{> loginButtons}}
+    <td id="login">{{> loginButtons}}</td>
   </tr>
   <tr>
   	<td class="scroll">
@@ -20,21 +20,16 @@
   		</div>
   	</td>
 
-  	<td>
+  	<td class="calendar">
   		<!-- Calendar -->
   		{{> calendar}}
   	</td>
 	
-	<td>
+	<td class="checkBox">
   		<!-- Checkbox -->
   		{{> check}}
   	</td>
 	
-	<td>
-		<form class="news">
-  		<label for="Eventos"></label>
-		</form>
-  	</td>
    </tr>
   </table>
  

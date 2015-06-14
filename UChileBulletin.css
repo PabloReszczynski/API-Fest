@@ -15,7 +15,14 @@ ul{
 
 h1{
   text-align: center;
-  color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; 
+  color: #ffffff;
+  font-family: 'Raleway',sans-serif; 
+  font-size: 62px; font-weight: 800; 
+  line-height: 72px; 
+  margin: 0 0 24px; 
+  text-align: center; 
+  text-transform: 
+  uppercase; 
 }
 
 h2 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 30px; font-weight: 800; line-height: 36px; margin: 20px 0 24px; }
@@ -24,6 +31,14 @@ h2 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 30px; font-we
   width: 46px;
   height: 44px;
   background: url("https://github.com/mmattamala/LogosFCFM/blob/master/Universidad%20de%20Chile/logo_escudo_png.png?raw=true") 0 0;
+}
+
+
+#login{
+  padding-left: 50px;
+}
+.checkBox{
+  padding-left: 50px;
 }
 
 .mainTable{
