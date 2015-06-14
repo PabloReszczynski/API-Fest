@@ -13,7 +13,8 @@ if (Meteor.isClient){
   });
   
     SuperCalendar.events.onDayClick = function (event, template, data) {
-    //pasa. Ya no pueden editar con click en el dia.
+    //pasa. Ya no pueden editar con click en el dia. 
+    // :((((((((
     };
         
   Template.body.events({
