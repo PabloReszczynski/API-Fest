@@ -1,6 +1,7 @@
 body{
   font-family: sans-serif;
-  background-image: url("http://substantial.com/assets/images/blog/2015/05/materialdesign_blog.png");
+  /*background-image: url("http://substantial.com/assets/images/blog/2015/05/materialdesign_blog.png");*/
+  background-image: linear-gradient(to bottom, #06BAB4 0%, #09309C 100%);
   background-size: 100%;
   background-position: center;
   background-color: #cccccc;
