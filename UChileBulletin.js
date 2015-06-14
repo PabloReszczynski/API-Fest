@@ -12,10 +12,10 @@ if (Meteor.isClient){
     }
   });
   
-    SuperCalendar.events.onDayClick = function (event, template, data) {
-    //pasa. Ya no pueden editar con click en el dia. 
-    // :((((((((
-    };
+    // SuperCalendar.events.onDayClick = function (event, template, data) {
+    // //pasa. Ya no pueden editar con click en el dia. 
+    // // :((((((((
+    // };
         
   Template.body.events({
     "submit .new-task": function(event){
@@ -60,20 +60,20 @@ if (Meteor.isClient){
       }
 
       Calendar.insert({
-        title: title + '',
+        title: title,
         start: date,
         allDay: false,
-        description: desc + ''
+        description: desc
       });
       
-      // //Clear form
-      // event.target.title.value = "";
-      // event.target.desc.value = "";
-      // event.target.date.value = "";
-      // event.target.time.value = "";
+      //Clear form
+      event.target.title.value = "";
+      event.target.desc.value = "";
+      event.target.date.value = "";
+      event.target.time.value = "";
 
       //prevent default form submit
-      return true;
+      return false;
     },
         
       "click .news": function(){
@@ -94,6 +94,11 @@ if (Meteor.isClient){
 if (Meteor.isServer){
   Meteor.publish('calendar', function(){
     return Calendar.find();
+  });
+  Calendar.allow({
+    'insert':function(userId, doc){
+      return true;
+    }
   });
   Tasks.allow({
     'insert':function(userId,doc){
