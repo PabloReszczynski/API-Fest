@@ -80,3 +80,20 @@ h2 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 30px; font-we
    height: 350px;
    overflow:scroll;
 }
+
+
+
+.fc-event {
+  background: #99FFCC !important;
+  color: #000 !important;
+  }
+  
+/* for vertical events */
+  
+.fc-event-bg {
+  display: none !important;
+  }
+  
+.fc-event .ui-resizable-handle {
+  display: none !important;
+  }
