@@ -6,9 +6,9 @@
   <table class="mainTable">
   <tr>
   	<td><img src="http://omics-solutions.cl/wp-content/uploads/2013/06/logo-u-de-chile.gif" 
-  				style="width:150px;height:130px;"><br></td>
+  				style="width:150px;height:130px;"></td>
   	<td><h1>Eventos UChile</h1></td>
-    {{> loginButtons}}
+    <td id="login">{{> loginButtons}}</td>
   </tr>
   <tr>
   	<td class="scroll">
@@ -20,21 +20,16 @@
   		</div>
   	</td>
 
-  	<td>
+  	<td class="calendar">
   		<!-- Calendar -->
   		{{> calendar}}
   	</td>
 	
-	<td>
+	<td class="checkBox">
   		<!-- Checkbox -->
   		{{> check}}
   	</td>
 	
-	<td>
-		<form class="news">
-  		<label for="Eventos"></label>
-		</form>
-  	</td>
    </tr>
   </table>
  
@@ -52,20 +47,20 @@
 </body>
 <!-- Template to see the events in the scroll -->
 <template name="task">
-	<table class="table1">
+	<table class="event">
     <tr>
 
       <td>
-        <table class="table3">
-        <th id="text1">{{title}}</th>
-          <tr><td id="text2">
+        <table class="tableInfo">
+        <th id="textTitle">{{title}}</th>
+          <tr><td id="textDescr">
             {{descripcion}}
           </td></tr>
         </table>
       </td>
 
       <td>
-        <table class="table2">
+        <table class="tableDate">
           <th id="text3">{{date}}</th>
         </table>
       </td>

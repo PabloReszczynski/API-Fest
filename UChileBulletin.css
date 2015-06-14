@@ -16,7 +16,14 @@ ul{
 
 h1{
   text-align: center;
-  color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; 
+  color: #ffffff;
+  font-family: 'Raleway',sans-serif; 
+  font-size: 62px; font-weight: 800; 
+  line-height: 72px; 
+  margin: 0 0 24px; 
+  text-align: center; 
+  text-transform: 
+  uppercase; 
 }
 
 h2 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 30px; font-weight: 800; line-height: 36px; margin: 20px 0 24px; }
@@ -27,6 +34,14 @@ h2 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 30px; font-we
   background: url("https://github.com/mmattamala/LogosFCFM/blob/master/Universidad%20de%20Chile/logo_escudo_png.png?raw=true") 0 0;
 }
 
+
+#login{
+  padding-left: 50px;
+}
+.checkBox{
+  padding-left: 50px;
+}
+
 .mainTable{
   padding: 10px 10px 10px 10px;
 }
@@ -34,20 +49,20 @@ h2 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 30px; font-we
 .scroll{
   padding-right: 50px;
 }
-.table1 {
+.event{
   border: 1px solid #CCFFFF;
   font-family: Arial, Helvetica, sans-serif;
   width:300px;
   background:#CCFFFF;
 }
-#text1{
+#textTitle{
   font-size:20px;
   text-align:left;
 }
-#text2{
+#textDesc{
   font-size:15px;
 }
-.table2{
+.tableDate{
   border: 1px solid black;
   padding:5px 15px 5px 15px;
   background: #009999;
@@ -57,7 +72,7 @@ h2 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 30px; font-we
   width:80px;
   font-weight: normal;
 }
-.table3{
+.tableInfo{
     width:180px;
 }
 .container{
