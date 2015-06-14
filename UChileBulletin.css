@@ -33,20 +33,20 @@ h2 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 30px; font-we
 .scroll{
   padding-right: 50px;
 }
-.table1 {
+.event{
   border: 1px solid #CCFFFF;
   font-family: Arial, Helvetica, sans-serif;
   width:300px;
   background:#CCFFFF;
 }
-#text1{
+#textTitle{
   font-size:20px;
   text-align:left;
 }
-#text2{
+#textDesc{
   font-size:15px;
 }
-.table2{
+.tableDate{
   border: 1px solid black;
   padding:5px 15px 5px 15px;
   background: #009999;
@@ -56,7 +56,7 @@ h2 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 30px; font-we
   width:80px;
   font-weight: normal;
 }
-.table3{
+.tableInfo{
     width:180px;
 }
 .container{
