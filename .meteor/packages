@@ -6,9 +6,10 @@
 
 meteor-platform
 gabrielhpugliese:supercalendar
-accounts-ui
 accounts-facebook
 twbs:bootstrap
 underscore
 iron:router
 sacha:spin
+ian:accounts-ui-bootstrap-3
+accounts-password
